@@ -1,0 +1,21 @@
+mysql:
+  image: mysql:8.0
+  rootPassword: my-secret-pw
+  storageSize: 8Gi
+
+wordpress:
+  image: wordpress:6.2
+  storageSize: 8Gi
+  serviceType: LoadBalancer
+  siteTitle: My WordPress Site
+  adminUser: admin
+  adminPassword: admin123
+  adminEmail: admin@example.com
+  dbName: wordpress
+  dbUser: wpuser
+  dbPassword: wppassword
+
+storageClassName: azure-disk
+
+namespace: wordpress-azure
+createNamespace: true
