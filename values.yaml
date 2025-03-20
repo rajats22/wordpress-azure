@@ -15,7 +15,7 @@ wordpress:
   dbUser: wpuser
   dbPassword: wppassword
 
-storageClassName: azure-disk
+storageClassName: managed-csi
 
 namespace: wordpress-azure
 createNamespace: true
