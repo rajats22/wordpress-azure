@@ -2,6 +2,9 @@ mysql:
   image: mysql:8.0
   rootPassword: my-secret-pw
   storageSize: 8Gi
+  persistence:
+    enabled: true
+    existingClaim: mysql-pvc
 
 wordpress:
   image: wordpress:6.2
@@ -14,6 +17,9 @@ wordpress:
   dbName: wordpress
   dbUser: wpuser
   dbPassword: wppassword
+  persistence:
+    enabled: true
+    existingClaim: wordpress-pvc
 
 storageClassName: managed-csi
 
